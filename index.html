@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Interpolation methods for point cloud rendering</title>
+        <style>
+            *{
+                font: 15px Arial, sans-serif;
+            }
+
+            h1{
+                font-size: 30px;
+            }
+            div{
+                width: 800px;
+                margin: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>Interpolation methods for point cloud rendering</h1>
+            <select id="cmbTestCase">
+                <option value="1">Test case 1</option>
+                <option value="2">Test case 2</option>
+                <option value="3">Test case 3</option>
+                <option value="4">Test case 4</option>
+                <option value="5">Test case 5</option>
+                <option value="6">Test case 6</option>
+            </select>
+            <select id="cmbAlgorithm">
+                <option value="algorithms/PointCloud.html">Rendering with fixed size points</option>
+                <option value="algorithms/NearestNeighbour.html">Nearest neighbors</option>
+                <option value="algorithms/JumpFlooding.html">Jump Flooding Algorithm</option>
+                <option value="algorithms/WeightedDistance.html">Inverse distance weighting</option>
+                <option value="algorithms/WeightedDistanceSplats.html">Inverse distance weighting with splats</option>
+                <option value="algorithms/NaturalNeighbour.html">Natural neighbors</option>
+                <option value="algorithms/Paraboloids.html">Rendering with paraboloids</option>
+                <option value="algorithms/CombinationParaboloid.html">Proposed algorithm</option>
+            </select>
+            <script>
+                function openTestCase(){
+                    var cmbTestCase = document.getElementById("cmbTestCase");
+                    var cmbAlgorithm = document.getElementById("cmbAlgorithm");
+                    window.location = cmbAlgorithm.value + "?" + cmbTestCase.value;
+                }
+                console.log("ij")
+            </script>
+            <button onclick="openTestCase()">Open</button>
+        </div>
+    </body>
+</html>
